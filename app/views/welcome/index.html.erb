@@ -57,7 +57,7 @@
       <div>
         <%= form_for @sign_up, method: :post do |f| %>
         <%= f.text_field :email %>
-        <%= f.collection_select :raffle_option_id, @raffle_options, :id, :option_name, include_blank: false %>
+        <%= f.collection_select :raffle_draw_id, @raffle_draws, :id, :option_name, include_blank: false %>
         <%= f.submit %>
         <% end %>
       </div>

@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
     def index
         @sign_up = SignUp.new
-        @raffle_options = RaffleOption.all
+        @raffle_draws = RaffleDraw.all
     end
 end

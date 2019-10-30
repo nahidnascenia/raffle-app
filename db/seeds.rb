@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 ['Win a fancy dinner', "Win a kid's toy", 'Win a free bottle of perfume'].each do |opt|
-    RaffleOption.find_or_create_by!(option_name: opt)
+    RaffleDraw.find_or_create_by!(option_name: opt)
 end

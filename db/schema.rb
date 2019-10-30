@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_29_190023) do
+ActiveRecord::Schema.define(version: 2019_10_30_113545) do
 
-  create_table "raffle_options", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "raffle_draws", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "option_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2019_10_29_190023) do
 
   create_table "sign_ups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email"
-    t.integer "raffle_option_id"
+    t.integer "raffle_draw_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
