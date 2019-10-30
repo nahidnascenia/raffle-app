@@ -5,7 +5,8 @@ class SignUpsController < ApplicationController
             flash[:alert] = 'You already signed up for this raffle! Thank you'
         else
             SignUp.create(sign_up_params)
-            flash[:alert] = "Thanks for signing up! Your odds of winning are #{SignUp.calculate_win_percent(params[:sign_up][:raffle_draw_id])}%!"
+            raffle_draw = RaffleDraw.find(params[:sign_up][:raffle_draw_id])
+            flash[:alert] = "Thanks for signing up! Your odds of winning are #{raffle_draw.calculate_win_percent}%!"
         end
         redirect_to root_path
     end
